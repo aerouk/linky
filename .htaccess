@@ -1,0 +1,11 @@
+##
+# linky v1.0
+# painless and simple url shortening
+# © aerouk 2014
+##
+
+RewriteEngine On
+
+RewriteRule     ^/?$            views/pages/index.php                       [L,NC]
+RewriteRule     ^create/?$      app/linky.php?action=create                 [L,NC]
+RewriteRule     ^([^/\.]+)/?$   app/linky.php?action=redirect&uri=$1        [L,NC]
