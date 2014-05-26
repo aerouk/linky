@@ -11,7 +11,7 @@
     <body>
         <div class="container">
             <h1 class="page-header">
-                linky
+                <?php echo APPLICATION_NAME; ?>
                 <small>url shortener</small>
             </h1>
 
