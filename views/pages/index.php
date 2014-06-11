@@ -17,8 +17,7 @@
 
             <div class="col-md-6">
                 <?php
-                    if (isset($_GET['url']) && $_GET['uri'])
-                    {
+                    if (isset($_GET['url']) && $_GET['uri']) {
                         $url = $_GET['url'];
                         $uri = APPLICATION_URL . $_GET['uri'];
 
@@ -30,10 +29,8 @@
                         <?php
                     }
 
-                    if (isset($_GET['e']))
-                    {
-                        switch ($_GET['e'])
-                        {
+                    if (isset($_GET['e'])) {
+                        switch ($_GET['e']) {
                             case 'na': $ex = "linky didn't receive an action to run"; break;
                             case 'nouri': $ex = "linky didn't receive a URI to redirect to"; break;
                             case 'unf': $ex = "linky didn't find that URI in its database, so it can't redirect you"; break;
