@@ -14,9 +14,9 @@ function generateRandomURI()
         $uri .= substr($an, rand(0, strlen($an)), 1);
     }
 
-    $query = mysqli_query($connection, "SELECT * FROM linky_urls WHERE uri = '$uri'");
+    $query = $connection->query("SELECT * FROM linky_urls WHERE uri = '$uri'");
 
-    if (mysqli_num_rows($query) > 0) {
+    if ($query->num_rows > 0) {
          generateRandomURI();
          die();
     } else {
