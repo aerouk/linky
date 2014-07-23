@@ -15,4 +15,4 @@ define('DATABASE_NAME', ""); # Database name
 
 /*  -  DO NOT EDIT BELOW THIS LINE  -  */
 
-$connection = mysqli_connect(DATABASE_HOST, DATABASE_USER, DATABASE_PASS, DATABASE_NAME);
+$connection = new mysqli(DATABASE_HOST, DATABASE_USER, DATABASE_PASS, DATABASE_NAME);
