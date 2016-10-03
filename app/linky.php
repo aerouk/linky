@@ -43,7 +43,12 @@ if ($_GET['action'] == "redirect") {
         $statement->execute();
         $statement->fetch();
         $statement->close();
-        redirect(APPLICATION_URL . "?url=$url&uri=$uri");
+
+        if (isset($_POST['api'])) {
+            die($url);
+        } else {
+            redirect(APPLICATION_URL . "?url=$url&uri=$uri");
+        }
     }
 
     $connection->close();
