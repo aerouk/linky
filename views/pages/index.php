@@ -53,7 +53,7 @@
                     <input type="text" name="url" class="form-control" placeholder="URL">
                     <p></p>
                     <?php if (ALLOW_CUSTOM_URI): ?>
-                    <input type="text" name="uri" class="form-control" placeholder="URI (leave blank to generate a random one)">
+                    <input type="text" name="uri" class="form-control" placeholder="URI (optional, alphanumeric)">
                     <p></p>
                     <?php endif; ?>
                     <button type="submit" class="btn btn-primary btn-xs btn-block">Create Short URL</button>
