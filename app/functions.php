@@ -7,6 +7,8 @@
 
 function generateRandomURI()
 {
+    global $connection;
+
     $an = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     $uri = "";
 
