@@ -36,7 +36,7 @@
                             case 'unf': $ex = "linky didn't find that URI in its database, so it can't redirect you"; break;
                             case 'url': $ex = "linky didn't receive a URL to add to its database"; break;
                             case 'nq': $ex = "linky didn't find support for that query in its code"; break;
-                            
+
                             default: $ex = "linky doesn't know how to handle that error!"; break;
                         }
 
@@ -52,8 +52,10 @@
                 <form action="/create" method="post">
                     <input type="text" name="url" class="form-control" placeholder="URL">
                     <p></p>
+                    <?php if (ALLOW_CUSTOM_URI): ?>
                     <input type="text" name="uri" class="form-control" placeholder="URI (leave blank to generate a random one)">
                     <p></p>
+                    <?php endif; ?>
                     <button type="submit" class="btn btn-primary btn-xs btn-block">Create Short URL</button>
                 </form>
             </div>

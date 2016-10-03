@@ -36,7 +36,7 @@ if ($_GET['action'] == "redirect") {
     }
 
     $url = preg_match("@^https?://@", $_POST['url']) ? $_POST['url'] : "http://" . $_POST['url'];
-    $uri = (isset($_POST['uri']) && $_POST['uri'] != "") ? $_POST['uri'] : generateRandomURI();
+    $uri = (isset($_POST['uri']) && $_POST['uri'] != "" && ALLOW_CUSTOM_URI && ctype_alnum($_POST['uri'])) ? $_POST['uri'] : generateRandomURI();
 
     if ($statement = $connection->prepare("INSERT INTO linky_urls (url,uri) VALUES (?, ?)")) {
         $statement->bind_param("ss", $url, $uri);
