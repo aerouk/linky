@@ -19,8 +19,7 @@ function generateRandomURI()
     $query = $connection->query("SELECT * FROM linky_urls WHERE uri = '$uri'");
 
     if ($query->num_rows > 0) {
-         generateRandomURI();
-         die();
+         return generateRandomURI();
     } else {
         return $uri;
     }
